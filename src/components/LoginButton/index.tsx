@@ -1,8 +1,12 @@
 import { Container, TextButton } from "./styles";
 
-export function LoginButton() {
+type LoginButtonProps = {
+  onPress: () => void;
+}
+
+export function LoginButton({ onPress }: LoginButtonProps) {
   return(
-    <Container>
+    <Container onPress={onPress}>
       <TextButton>Login</TextButton>
     </Container>
   )
