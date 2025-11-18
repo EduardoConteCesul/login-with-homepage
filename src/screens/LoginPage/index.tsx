@@ -7,14 +7,13 @@ export function LoginPage(){
   const navigation = useNavigation();
 
   const storeData = async (value: string) => {
-  try {
-    console.log('Salvando usuário ', value);
-    await AsyncStorage.setItem('my-key', value);
-    navigation.navigate('Home' as never);
-  } catch (e) {
-    console.error('Erro ao salvar usuário ', e);
-  }
-};
+    try {
+      await AsyncStorage.setItem('userName', value);
+      navigation.navigate('Home' as never);
+    } catch (e) {
+      console.error('Erro ao salvar usuário ', e);
+    }
+  };
 
   return(
     <Container>     

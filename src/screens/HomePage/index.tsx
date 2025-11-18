@@ -9,7 +9,7 @@ export function HomePage() {
 
   const getData = async () => {
     try {
-      const value = await AsyncStorage.getItem('my-key');
+      const value = await AsyncStorage.getItem('userName');
       if (value !== null) {
         setValue(value);
       }
